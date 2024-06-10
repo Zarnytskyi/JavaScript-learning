@@ -87,7 +87,7 @@ let text ="this book cost $20"
     let a = 10;
     let b = 20;
     if (typeof a === "number" && typeof b === "number") {
-        console.log(a + b); // Виведе: 30
+        console.log(a + b);
     } else {
         console.log("Sum of those items can’t be counted");
     }
