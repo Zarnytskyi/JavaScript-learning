@@ -65,6 +65,20 @@ const arr2 = ["php", "php", "css", "css",
 ];
 const uniqueArray = []
 
+const uniqueSet = new Set(arr2);
+
+for (let item of uniqueSet) {
+uniqueArray.push(item);
+}
+
 // 5. В объекте result должны быть свойства в которых ключ это элемент массива arr а значение - количество этих элементов в массиве arr
 const arr3 = ['Jane','Bob','Bob','Luci','Jane','Bob','Peter','Felix','Felix','Bob','Andrew'];
 const result = {};
+
+for (let name of arr3) {
+  if (result[name]) {
+      result[name]++;
+  } else {
+      result[name] = 1;
+  }
+}
