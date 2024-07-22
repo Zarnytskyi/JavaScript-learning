@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // 1. Remove non-car items from the list
+
   const ul = document.querySelector("ul");
   const items = ul.querySelectorAll("li");
   items.forEach(item => {
@@ -9,23 +9,19 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // 2. Add class 'listItem' to all li elements and class 'list' to ul element
   ul.classList.add("list");
   ul.querySelectorAll("li").forEach(item => {
     item.classList.add("listItem");
   });
 
-  // 3. Add a new li element with text 'Bugatti' to the beginning of the list
   const liBugatti = document.createElement("li");
   liBugatti.textContent = "Bugatti";
   ul.prepend(liBugatti);
 
-  // 4. Add a new li element with text 'Ford' to the end of the list
   const liFord = document.createElement("li");
   liFord.textContent = "Ford";
   ul.append(liFord);
 
-  // 5. Add input elements for name, surname, password, and password confirmation to the form
   const form = document.querySelector("form");
   const inputs = [
     { type: "text", placeholder: "Name" },
@@ -40,26 +36,21 @@ document.addEventListener("DOMContentLoaded", () => {
     form.appendChild(input);
   });
 
-  // 6. Add an image to the page
   const img = document.createElement("img");
-  img.src = "https://via.placeholder.com/150"; // Placeholder image URL, replace with actual if needed
+  img.src = "bmw.png";
   document.body.appendChild(img);
 
-  // 7. Remove the classes 'red' and 'italic' from the paragraph
   const paragraph = document.querySelector("p");
   paragraph.classList.remove("red", "italic");
 
-  // 8. Add an h1 tag with the text 'this is h1 tag' to the div with id 'h1Wrapper'
   const h1Wrapper = document.getElementById("h1Wrapper");
   const h1 = document.createElement("h1");
   h1.textContent = "this is h1 tag";
   h1Wrapper.appendChild(h1);
 
-  // 9. Set the h1 tag's text color to blue and font size to 40 pixels
   h1.style.color = "blue";
   h1.style.fontSize = "40px";
 
-  // 10. Display products grouped by categories
   const products = [
     { category: "Electronics", items: [
       { name: "Wireless Mouse", price: 25.99 },
